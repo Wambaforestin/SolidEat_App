@@ -4,6 +4,7 @@ class AppColors {
   //for the color scheme
   static const Color primaryColor = Color(0xFFF9A11B);
   static const Color secondaryColor = Color(0xFFFFF1D0);
+  static const Color whiteColor = Color(0xFFFFFFFF);
 
   //for the text color
   static const Color primaryTextColor = Color(0xFF000017);
@@ -27,4 +28,8 @@ class AppColors {
 
   //for the background color
   static const Color primaryBackgroundColor = Color(0xFFE5E5E5);
+
+  //for the Splash Screen
+
+  static const Color splashScreenBackgroundColor = Color(0xFFF9A11B);
 }
