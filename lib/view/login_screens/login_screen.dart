@@ -3,6 +3,7 @@ import 'package:solideat/common_custom_widgets/colors.dart';
 import 'package:solideat/custom_widgets/round_button.dart';
 import 'package:solideat/custom_widgets/round_button_with_icon.dart';
 import 'package:solideat/custom_widgets/textfield.dart';
+import 'package:solideat/view/login_screens/signup_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -70,7 +71,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 onPressed: () {
                   //TODO: Implement login
                 },
-                title: "Connexion",
+                title: "connexion",
                 type: RoundButtonType.primary,
               ),
               const SizedBox(
@@ -137,6 +138,12 @@ class _LoginScreenState extends State<LoginScreen> {
                   TextButton(
                     onPressed: () {
                       //TODO: Implement create account
+                       Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const SignUpScreen(),
+                    ),
+                  );
                     },
                     child: const Text(
                       "Créer un compte",

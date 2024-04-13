@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:solideat/common_custom_widgets/colors.dart';
 import 'package:solideat/custom_widgets/round_button.dart';
 import 'package:solideat/custom_widgets/textfield.dart';
+import 'package:solideat/view/login_screens/login_screen.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
@@ -118,7 +119,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   ),
                   TextButton(
                     onPressed: () {
-                      //TODO: Implement create account
+                      //TODO: Implement login
+                       Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const LoginScreen(),
+                    ),
+                  );
                     },
                     child: const Text(
                       "Connectez-vous",
