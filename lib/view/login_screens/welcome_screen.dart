@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:solideat/common_custom_widgets/colors.dart';
+import 'package:solideat/custom_widgets/round_button.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({super.key});
@@ -31,28 +32,36 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               ),
             ],
           ),
-          SizedBox(height: size.height * 0.1),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: Container(
-              height: 50,
-              decoration: BoxDecoration(
-                color: AppColors.primaryButtonBorderColor,
-                borderRadius: BorderRadius.circular(25),
-              ),
-              child: const Center(
-                child: Text(
-                  'Login',
-                  style: TextStyle(
-                    color: AppColors.whiteColor,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              )
-            ),
+          //adding a welcome text jsut ontop of the buttons
+          SizedBox(height: size.width * 0.25),
+          const Text(
+            "Bienvenue sur SolidEat, où vous pouvez découvrir plus \nde 500 restaurants de renom à travers la France",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+                color: AppColors.primaryTextColor,
+                fontSize: 18,
+                fontFamily: 'Roboto Light',
+                fontWeight: FontWeight.w300),
           ),
-          SizedBox(height: size.height * 0.1),
+          SizedBox(height: size.width * 0.25),
+          Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: RoundButton(
+                onPressed: () {
+                  //TODO: navigate to login screen
+                },
+                title: "connexion",
+                type: RoundButtonType.primary,
+              )),
+          const SizedBox(height: 20),
+          Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: RoundButton(
+                  type: RoundButtonType.secondary,
+                  onPressed: () {
+                    //TODO: navigate to sign up screen
+                  },
+                  title: "créer un compte")),
         ],
       ),
     );
