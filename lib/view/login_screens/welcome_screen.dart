@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:solideat/common_custom_widgets/colors.dart';
 import 'package:solideat/custom_widgets/round_button.dart';
+import 'package:solideat/view/login_screens/login_screen.dart';
+import 'package:solideat/view/login_screens/signup_screen.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({super.key});
@@ -49,19 +51,32 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               child: RoundButton(
                 onPressed: () {
                   //TODO: navigate to login screen
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => LoginScreen(),
+                    ),
+                  );
                 },
                 title: "connexion",
                 type: RoundButtonType.primary,
               )),
           const SizedBox(height: 20),
           Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: RoundButton(
-                  type: RoundButtonType.secondary,
-                  onPressed: () {
-                    //TODO: navigate to sign up screen
-                  },
-                  title: "créer un compte")),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: RoundButton(
+                type: RoundButtonType.secondary,
+                onPressed: () {
+                  //TODO: navigate to sign up screen
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SignUpScreen(),
+                    ),
+                  );
+                },
+                title: "créer un compte"),
+          ),
         ],
       ),
     );
