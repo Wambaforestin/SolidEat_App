@@ -3,6 +3,7 @@ import 'package:solideat/common_custom_widgets/colors.dart';
 import 'package:solideat/custom_widgets/round_button.dart';
 import 'package:solideat/custom_widgets/round_button_with_icon.dart';
 import 'package:solideat/custom_widgets/textfield.dart';
+import 'package:solideat/view/login_screens/reset_password_screen.dart';
 import 'package:solideat/view/login_screens/signup_screen.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -79,7 +80,15 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               //4. forgot password
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  //TODO: Implement forgot password
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const ResetPasswordScreen(),
+                    ),
+                  );
+                },
                 child: const Text(
                   "Mot de passe oublié?",
                   style: TextStyle(
@@ -138,12 +147,12 @@ class _LoginScreenState extends State<LoginScreen> {
                   TextButton(
                     onPressed: () {
                       //TODO: Implement create account
-                       Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const SignUpScreen(),
-                    ),
-                  );
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const SignUpScreen(),
+                        ),
+                      );
                     },
                     child: const Text(
                       "Créer un compte",

@@ -3,6 +3,7 @@ import 'package:solideat/common_custom_widgets/colors.dart';
 import 'package:solideat/custom_widgets/round_button.dart';
 import 'package:solideat/custom_widgets/textfield.dart';
 import 'package:solideat/view/login_screens/login_screen.dart';
+import 'package:solideat/view/login_screens/password_otp_screen.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
@@ -12,8 +13,11 @@ class SignUpScreen extends StatefulWidget {
 }
 
 class _SignUpScreenState extends State<SignUpScreen> {
+  TextEditingController userName = TextEditingController();
   TextEditingController emailController = TextEditingController();
+  TextEditingController addressController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
+  TextEditingController confirmPasswordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     // var size = MediaQuery.of(context).size;
@@ -47,7 +51,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               // CustomTextfield is a custom widget that we created to make the textfield more reusable
               //1. username textfield
               CustomTextfield(
-                controller: emailController,
+                controller: userName,
                 hintText: "Nom",
                 icon: Icons.person,
                 isPassword: false,
@@ -67,7 +71,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               ),
               //3.address textfield
               CustomTextfield(
-                controller: emailController,
+                controller: addressController,
                 hintText: "Adresse",
                 icon: Icons.location_on,
                 isPassword: false,
@@ -86,7 +90,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 height: 20,
               ),
               CustomTextfield(
-                controller: passwordController,
+                controller: confirmPasswordController,
                 hintText: "Confirmer le mot de passe",
                 icon: Icons.lock,
                 isPassword: true,
@@ -98,6 +102,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
               RoundButton(
                 onPressed: () {
                   //TODO: Implement login
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const PasswordOTPScreen(),
+                    ),
+                  );
                 },
                 title: "Créer un compte",
                 type: RoundButtonType.primary,
@@ -120,12 +130,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   TextButton(
                     onPressed: () {
                       //TODO: Implement login
-                       Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const LoginScreen(),
-                    ),
-                  );
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const LoginScreen(),
+                        ),
+                      );
                     },
                     child: const Text(
                       "Connectez-vous",

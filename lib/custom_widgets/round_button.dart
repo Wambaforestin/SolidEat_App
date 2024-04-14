@@ -14,7 +14,7 @@ class RoundButton extends StatefulWidget {
       {super.key,
       required this.onPressed,
       required this.title,
-      required this.type});
+      required this.type,});
 
   @override
   State<RoundButton> createState() => _RoundButtonState();
