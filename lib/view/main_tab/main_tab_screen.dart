@@ -37,8 +37,8 @@ class _MainTabScreenState extends State<MainTabScreen> {
           },
           shape: const CircleBorder(),
           backgroundColor: selctTab == 2
-              ? AppColors.tertiaryTextColor
-              : AppColors.whiteColor,
+              ? AppColors.whiteColor
+              : AppColors.tertiaryTextColor,
           child: Image.asset(
             "assets/app_icons/home_icon.png",
             width: 30,
@@ -71,7 +71,7 @@ class _MainTabScreenState extends State<MainTabScreen> {
                   },
                   isSelected: selctTab == 0),
               TabButton(
-                  title: "Mes Cmds",
+                  title: "Panier",
                   icon: "assets/app_icons/order_icon.png",
                   onTap: () {
                     if (selctTab != 1) {
