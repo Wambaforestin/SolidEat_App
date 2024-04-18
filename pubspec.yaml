@@ -68,6 +68,7 @@ flutter:
     # - assets/images/logo_SolidEat.png
     # - assets/images/welcome_image.png
     - assets/images/
+    - assets/app_icons/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

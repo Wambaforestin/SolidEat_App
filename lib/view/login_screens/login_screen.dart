@@ -5,8 +5,7 @@ import 'package:solideat/custom_widgets/round_button_with_icon.dart';
 import 'package:solideat/custom_widgets/textfield.dart';
 import 'package:solideat/view/login_screens/reset_password_screen.dart';
 import 'package:solideat/view/login_screens/signup_screen.dart';
-import 'package:solideat/view/onboarding_screens/on_boarding_screen.dart';
-
+import 'package:solideat/view/main_tab/main_tab_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -76,7 +75,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const OnBoardingScreen(),
+                      builder: (context) => const MainTabScreen(),
                     ),
                   );
                 },

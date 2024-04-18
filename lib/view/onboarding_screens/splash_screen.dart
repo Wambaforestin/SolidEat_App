@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:solideat/common_custom_widgets/colors.dart';
-import 'package:solideat/view/login_screens/welcome_screen.dart';
+import 'package:solideat/view/onboarding_screens/on_boarding_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -17,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   void gotoWelcomePage() async{
-    Navigator.push(context, MaterialPageRoute(builder: (context) => const WelcomeScreen()));
+    Navigator.push(context, MaterialPageRoute(builder: (context) => const OnBoardingScreen()));
   }
   @override
   Widget build(BuildContext context) {

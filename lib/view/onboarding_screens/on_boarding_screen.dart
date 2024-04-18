@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:solideat/common_custom_widgets/colors.dart';
 import 'package:solideat/custom_widgets/round_button.dart';
-import 'package:solideat/view/home_screens/main_home_screen.dart';
+import 'package:solideat/view/login_screens/welcome_screen.dart';
 
 class OnBoardingScreen extends StatefulWidget {
   const OnBoardingScreen({super.key});
@@ -139,7 +139,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                       Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const MainHomeScreen(),
+                      builder: (context) => const WelcomeScreen(),
                     ),
                   );
                     } else {
