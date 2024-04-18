@@ -29,7 +29,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
     {
       'title': 'Plus d\'un Reseaux de Restaurant',
       'description':
-          'Explorez un réseau mondial de plus de 500 restaurants partenaires, disponibles en France.',
+          'Explorez un réseau avec de plus de 500 restaurants partenaires, disponibles en France.',
       'image': 'assets/images/slide_image4.png'
     }
   ];
