@@ -9,6 +9,7 @@ class AppColors {
   //for the text color
   static const Color primaryTextColor = Color(0xFF000017);
   static const Color secondaryTextColor = Color(0xFFF9A11B);
+  static const Color tertiaryTextColor = Color.fromARGB(255, 143, 142, 142);
 
   //for the text field color
   static const Color primaryTextFieldColor = Color(0xFFF2F2F2);

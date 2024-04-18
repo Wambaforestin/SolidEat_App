@@ -40,7 +40,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             "Bienvenue sur SolidEat, où vous pouvez découvrir plus \nde 500 restaurants de renom à travers la France",
             textAlign: TextAlign.center,
             style: TextStyle(
-                color: AppColors.primaryTextColor,
+                color: AppColors.tertiaryTextColor,
                 fontSize: 18,
                 fontFamily: 'Roboto Light',
                 fontWeight: FontWeight.w300),

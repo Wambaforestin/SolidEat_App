@@ -10,11 +10,12 @@ class RoundButton extends StatefulWidget {
   final VoidCallback onPressed;
   final String title;
   final RoundButtonType type;
-  const RoundButton(
-      {super.key,
-      required this.onPressed,
-      required this.title,
-      required this.type,});
+  const RoundButton({
+    super.key,
+    required this.onPressed,
+    required this.title,
+    required this.type,
+  });
 
   @override
   State<RoundButton> createState() => _RoundButtonState();

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:otp_pin_field/otp_pin_field.dart';
 import 'package:solideat/common_custom_widgets/colors.dart';
 import 'package:solideat/custom_widgets/round_button.dart';
-import 'package:solideat/view/login_screens/new_password_screen.dart';
 
 class PasswordOTPScreen extends StatefulWidget {
   const PasswordOTPScreen({super.key});
