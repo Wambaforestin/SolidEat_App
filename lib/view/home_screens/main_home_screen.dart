@@ -173,7 +173,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                         const Text(
                           "Localisation Actuelle",
                           style: TextStyle(
-                              color: AppColors.secondaryTextColor,
+                              color: AppColors.primaryTextColor,
                               fontSize: 16,
                               fontWeight: FontWeight.w700),
                         ),
@@ -220,6 +220,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                   itemCount: catArr.length,
                   itemBuilder: ((context, index) {
                     var cObj = catArr[index] as Map? ?? {};
+                    //calling the category cell widget
                     return CategoryCell(
                       cObj: cObj,
                       onTap: () {},
@@ -272,6 +273,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
+                //calling the view all title row widget
                 child: ViewAllTitleRow(
                   title: "Récents",
                   onView: () {},
