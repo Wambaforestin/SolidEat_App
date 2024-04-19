@@ -3,6 +3,7 @@ import 'package:solideat/common_custom_widgets/colors.dart';
 import 'package:solideat/custom_widgets/tab_buttons.dart';
 import 'package:solideat/view/home_screens/main_home_screen.dart';
 import 'package:solideat/view/menu/menu_screen.dart';
+import 'package:solideat/view/profile/profile_screen.dart';
 
 class MainTabScreen extends StatefulWidget {
   const MainTabScreen({super.key});
@@ -59,6 +60,19 @@ class _MainTabScreenState extends State<MainTabScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               TabButton(
+                  title: "Plus",
+                  icon: "assets/app_icons/more_icon.png",
+                  onTap: () {
+                    if (selctTab != 4) {
+                      selctTab = 4;
+                      selectPage = const MainHomeScreen();
+                    }
+                    if (mounted) {
+                      setState(() {});
+                    }
+                  },
+                  isSelected: selctTab == 4),
+              TabButton(
                   title: "Menu",
                   icon: "assets/app_icons/menu_icon.png",
                   onTap: () {
@@ -71,6 +85,10 @@ class _MainTabScreenState extends State<MainTabScreen> {
                     }
                   },
                   isSelected: selctTab == 0),
+              const SizedBox(
+                width: 40,
+                height: 40,
+              ),
               TabButton(
                   title: "Panier",
                   icon: "assets/app_icons/order_icon.png",
@@ -84,36 +102,19 @@ class _MainTabScreenState extends State<MainTabScreen> {
                     }
                   },
                   isSelected: selctTab == 1),
-              const SizedBox(
-                width: 40,
-                height: 40,
-              ),
               TabButton(
                   title: "Profil",
                   icon: "assets/app_icons/profile_icon.png",
                   onTap: () {
                     if (selctTab != 3) {
                       selctTab = 3;
-                      selectPage = const MainHomeScreen();
+                      selectPage = const ProfileScreen();
                     }
                     if (mounted) {
                       setState(() {});
                     }
                   },
                   isSelected: selctTab == 3),
-              TabButton(
-                  title: "More",
-                  icon: "assets/app_icons/more_icon.png",
-                  onTap: () {
-                    if (selctTab != 4) {
-                      selctTab = 4;
-                      selectPage = const MainHomeScreen();
-                    }
-                    if (mounted) {
-                      setState(() {});
-                    }
-                  },
-                  isSelected: selctTab == 4),
             ],
           ),
         ),

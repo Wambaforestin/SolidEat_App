@@ -39,6 +39,7 @@ class _MenuScreenState extends State<MenuScreen> {
   Widget build(BuildContext context) {
     var media = MediaQuery.of(context).size;
     return Scaffold(
+      //This stack is used to display the side yellow brackground of the screen
       body: Stack(
         alignment: Alignment.centerLeft,
         children: [
@@ -47,10 +48,11 @@ class _MenuScreenState extends State<MenuScreen> {
             width: media.width * 0.27,
             height: media.height * 0.6,
             decoration: const BoxDecoration(
-              color: AppColors.primaryTextColor,
+              color: AppColors.secondaryTextColor,
               borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(35),
-                  bottomRight: Radius.circular(35)),
+                topRight: Radius.circular(35),
+                bottomRight: Radius.circular(35),
+              ),
             ),
           ),
           SingleChildScrollView(
@@ -67,7 +69,7 @@ class _MenuScreenState extends State<MenuScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         const Text(
-                          "Les différents menus😊",
+                          "Les différents menus 😊",
                           style: TextStyle(
                               color: AppColors.primaryTextColor,
                               fontSize: 20,

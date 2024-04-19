@@ -130,7 +130,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                                           CrossAxisAlignment.end,
                                       children: [
                                         Text(
-                                          price.toStringAsFixed(2),
+                                          price.toStringAsFixed(1),
                                           style: const TextStyle(
                                               color: AppColors.primaryTextColor,
                                               fontSize: 31,
@@ -140,10 +140,10 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                                           height: 4,
                                         ),
                                         const Text(
-                                          "/Nombre de reservation",
+                                          "/Nombre de plat actuel",
                                           style: TextStyle(
                                               color: AppColors.primaryTextColor,
-                                              fontSize: 11,
+                                              fontSize: 16,
                                               fontWeight: FontWeight.w500),
                                         ),
                                       ],
@@ -454,18 +454,15 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                                                   color: Colors.white,
                                                   borderRadius:
                                                       BorderRadius.only(
-                                                          topLeft:
-                                                              Radius.circular(
-                                                                  35),
-                                                          bottomLeft:
-                                                              Radius.circular(
-                                                                  35),
-                                                          topRight:
-                                                              Radius.circular(
-                                                                  10),
-                                                          bottomRight:
-                                                              Radius.circular(
-                                                                  10)),
+                                                    topLeft:
+                                                        Radius.circular(35),
+                                                    bottomLeft:
+                                                        Radius.circular(35),
+                                                    topRight:
+                                                        Radius.circular(10),
+                                                    bottomRight:
+                                                        Radius.circular(10),
+                                                  ),
                                                   boxShadow: [
                                                     BoxShadow(
                                                         color: Colors.black12,
@@ -479,7 +476,7 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                                                     CrossAxisAlignment.center,
                                                 children: [
                                                   const Text(
-                                                    "Nombre de reservation",
+                                                    "Nombre de plat actuel",
                                                     style: TextStyle(
                                                         color: AppColors
                                                             .primaryTextColor,

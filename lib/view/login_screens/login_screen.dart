@@ -112,7 +112,7 @@ class _LoginScreenState extends State<LoginScreen> {
               TextButton(
                 onPressed: () {},
                 child: const Text(
-                  "Ou connectez-vous avec👇",
+                  "Ou connectez-vous avec 👇",
                   style: TextStyle(
                     color: AppColors.primaryTextColor,
                     fontSize: 18,

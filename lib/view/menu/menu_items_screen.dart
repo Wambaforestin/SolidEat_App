@@ -25,7 +25,7 @@ class _MenuItemsSCreenState extends State<MenuItemsSCreen> {
       "food_type": "Desserts"
     },
     {
-      "image": "assets/images/menu2.png",
+      "image": "assets/images/menu3.png",
       "name": "",
       "rate": "4.9",
       "rating": "124",
@@ -41,7 +41,7 @@ class _MenuItemsSCreenState extends State<MenuItemsSCreen> {
       "food_type": "Desserts"
     },
     {
-      "image": "assets/images/menu2.png",
+      "image": "assets/images/menu3.png",
       "name": "",
       "rate": "4.9",
       "rating": "124",
