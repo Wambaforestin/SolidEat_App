@@ -69,7 +69,7 @@ class PopularRestaurantRow extends StatelessWidget {
                         "(${pObj["rating"]} Ratings)",
                         textAlign: TextAlign.center,
                         style: const TextStyle(
-                            color: AppColors.secondaryTextColor, fontSize: 11),
+                            color: AppColors.primaryTextColor, fontSize: 11),
                       ),
                       const SizedBox(
                         width: 8,

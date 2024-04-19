@@ -45,7 +45,7 @@ class MostPopularCell extends StatelessWidget {
                   mObj["type"],
                   textAlign: TextAlign.center,
                   style: const TextStyle(
-                      color: AppColors.secondaryTextColor, fontSize: 12),
+                      color: AppColors.primaryTextColor, fontSize: 12),
                 ),
                 const Text(
                   " . ",
@@ -57,7 +57,7 @@ class MostPopularCell extends StatelessWidget {
                   mObj["food_type"],
                   textAlign: TextAlign.center,
                   style: const TextStyle(
-                      color: AppColors.secondaryTextColor, fontSize: 12),
+                      color: AppColors.primaryTextColor, fontSize: 12),
                 ),
                 const SizedBox(
                   width: 8,

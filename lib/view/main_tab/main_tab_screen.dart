@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:solideat/common_custom_widgets/colors.dart';
 import 'package:solideat/custom_widgets/tab_buttons.dart';
 import 'package:solideat/view/home_screens/main_home_screen.dart';
+import 'package:solideat/view/menu/menu_screen.dart';
 
 class MainTabScreen extends StatefulWidget {
   const MainTabScreen({super.key});
@@ -63,7 +64,7 @@ class _MainTabScreenState extends State<MainTabScreen> {
                   onTap: () {
                     if (selctTab != 0) {
                       selctTab = 0;
-                      selectPage = const MainHomeScreen();
+                      selectPage = const MenuScreen();
                     }
                     if (mounted) {
                       setState(() {});
