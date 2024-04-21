@@ -14,9 +14,10 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
+  //Image picker instance
   final ImagePicker picker = ImagePicker();
   XFile? image;
-
+  //Text editing controllers for the text fields in the form
   TextEditingController txtName = TextEditingController();
   TextEditingController txtEmail = TextEditingController();
   TextEditingController txtMobile = TextEditingController();
@@ -52,7 +53,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     // Navigator.push(
                     //   context,
                     //   MaterialPageRoute(
-                    //     builder: (context) => const MyOrderView(),
+                    //     builder: (context) => const MyOrderScreen(),
                     //   ),
                     // );
                   },
@@ -102,7 +103,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               size: 12,
             ),
             label: const Text(
-              "Edit Profile",
+              "Changer l'image de profil",
               style: TextStyle(color: AppColors.primaryTextColor, fontSize: 12),
             ),
           ),

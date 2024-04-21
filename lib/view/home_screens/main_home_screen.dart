@@ -6,6 +6,7 @@ import 'package:solideat/custom_widgets/popular_restaurant_row.dart';
 import 'package:solideat/custom_widgets/recent_item_row.dart';
 import 'package:solideat/custom_widgets/text_field.dart';
 import 'package:solideat/custom_widgets/view_all_title_row.dart';
+import 'package:solideat/view/more/my_order_screen.dart';
 
 class MainHomeScreen extends StatefulWidget {
   const MainHomeScreen({super.key});
@@ -135,12 +136,11 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                     IconButton(
                       onPressed: () {
                         Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            //TODO: change the screen to the cart screen
-                            builder: (context) => const MainHomeScreen(),
-                          ),
-                        );
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const MyOrderScreen(),
+                              ),
+                            );
                       },
                       icon: Image.asset(
                         "assets/app_icons/shopping_cart_icon.png",

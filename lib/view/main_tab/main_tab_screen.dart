@@ -3,6 +3,7 @@ import 'package:solideat/common_custom_widgets/colors.dart';
 import 'package:solideat/custom_widgets/tab_buttons.dart';
 import 'package:solideat/view/home_screens/main_home_screen.dart';
 import 'package:solideat/view/menu/menu_screen.dart';
+import 'package:solideat/view/more/more_screen.dart';
 import 'package:solideat/view/profile/profile_screen.dart';
 
 class MainTabScreen extends StatefulWidget {
@@ -65,7 +66,7 @@ class _MainTabScreenState extends State<MainTabScreen> {
                   onTap: () {
                     if (selctTab != 4) {
                       selctTab = 4;
-                      selectPage = const MainHomeScreen();
+                      selectPage = const MoreScreen();
                     }
                     if (mounted) {
                       setState(() {});
@@ -90,12 +91,13 @@ class _MainTabScreenState extends State<MainTabScreen> {
                 height: 40,
               ),
               TabButton(
-                  title: "Panier",
-                  icon: "assets/app_icons/order_icon.png",
+                  title: "Avis/Chat",
+                  icon: "assets/app_icons/avis_chat_icon.png",
                   onTap: () {
                     if (selctTab != 1) {
-                      selctTab = 1;
-                      selectPage = const MainHomeScreen();
+                      //TODO: implement chat screen
+                      // selctTab = 1;
+                      // selectPage = const MainHomeScreen();
                     }
                     if (mounted) {
                       setState(() {});

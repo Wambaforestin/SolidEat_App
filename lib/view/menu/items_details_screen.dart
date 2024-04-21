@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:solideat/common_custom_widgets/colors.dart';
 import 'package:solideat/custom_widgets/round_button_with_icon.dart';
+import 'package:solideat/view/more/my_order_screen.dart';
 
 class ItemDetailsScreen extends StatefulWidget {
   const ItemDetailsScreen({super.key});
@@ -513,13 +514,13 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                                               )),
                                           InkWell(
                                             onTap: () {
-                                              // Navigator.push(
-                                              //   context,
-                                              //   MaterialPageRoute(
-                                              //     builder: (context) =>
-                                              //         const MyOrderView(),
-                                              //   ),
-                                              // );
+                                              Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      const MyOrderScreen(),
+                                                ),
+                                              );
                                             },
                                             child: Container(
                                               width: 45,

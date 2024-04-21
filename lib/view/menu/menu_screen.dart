@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:solideat/common_custom_widgets/colors.dart';
 import 'package:solideat/custom_widgets/text_field.dart';
 import 'package:solideat/view/menu/menu_items_screen.dart';
+import 'package:solideat/view/more/my_order_screen.dart';
 
 class MenuScreen extends StatefulWidget {
   const MenuScreen({super.key});
@@ -77,12 +78,12 @@ class _MenuScreenState extends State<MenuScreen> {
                         ),
                         IconButton(
                           onPressed: () {
-                            // Navigator.push(
-                            //   context,
-                            //   MaterialPageRoute(
-                            //     builder: (context) => const MyOrderView(),
-                            //   ),
-                            // );
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const MyOrderScreen(),
+                              ),
+                            );
                           },
                           icon: Image.asset(
                             "assets/app_icons/shopping_cart_icon.png",
