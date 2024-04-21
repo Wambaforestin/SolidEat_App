@@ -81,7 +81,7 @@ class _MyOrderScreenState extends State<MyOrderScreen> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const Text(
-                            "King Burgers",
+                            "Burger King",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 color: AppColors.primaryTextColor,
@@ -169,7 +169,7 @@ class _MyOrderScreenState extends State<MyOrderScreen> {
                                     fontSize: 12),
                               ),
                               Text(
-                                "Western Food",
+                                "Fast Food",
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                     color: AppColors.primaryTextColor,
@@ -238,37 +238,6 @@ class _MyOrderScreenState extends State<MyOrderScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        const Text(
-                          "Delivery Instructions",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              color: AppColors.primaryTextColor,
-                              fontSize: 13,
-                              fontWeight: FontWeight.w700),
-                        ),
-                        TextButton.icon(
-                          onPressed: () {},
-                          icon: const Icon(
-                            Icons.add,
-                            color: AppColors.primaryTextColor,
-                          ),
-                          label: const Text(
-                            "Add Notes",
-                            style: TextStyle(
-                                color: AppColors.primaryTextColor,
-                                fontSize: 13,
-                                fontWeight: FontWeight.w500),
-                          ),
-                        )
-                      ],
-                    ),
-                    Divider(
-                      color: AppColors.secondaryTextColor.withOpacity(0.5),
-                      height: 1,
-                    ),
                     const SizedBox(
                       height: 15,
                     ),
@@ -276,7 +245,7 @@ class _MyOrderScreenState extends State<MyOrderScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          "Sub Total",
+                          "Sur place/à emporter",
                           textAlign: TextAlign.center,
                           style: TextStyle(
                               color: AppColors.primaryTextColor,
@@ -284,30 +253,7 @@ class _MyOrderScreenState extends State<MyOrderScreen> {
                               fontWeight: FontWeight.w700),
                         ),
                         Text(
-                          "\$68",
-                          style: TextStyle(
-                              color: AppColors.primaryTextColor,
-                              fontSize: 13,
-                              fontWeight: FontWeight.w700),
-                        )
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 8,
-                    ),
-                    const Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          "Delivery Cost",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              color: AppColors.primaryTextColor,
-                              fontSize: 13,
-                              fontWeight: FontWeight.w700),
-                        ),
-                        Text(
-                          "\$2",
+                          "sur place",
                           style: TextStyle(
                               color: AppColors.primaryTextColor,
                               fontSize: 13,
@@ -321,6 +267,21 @@ class _MyOrderScreenState extends State<MyOrderScreen> {
                     Divider(
                       color: AppColors.secondaryTextColor.withOpacity(0.5),
                       height: 1,
+                    ),
+                    Divider(
+                      color: AppColors.secondaryTextColor.withOpacity(0.5),
+                      height: 1,
+                    ),
+                    const SizedBox(
+                      height: 15,
+                    ),
+                    const Text(
+                      "Sachez que tous les produits sont 100% gratuits et sans frais supplémentaires",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          color: AppColors.primaryTextColor,
+                          fontSize: 13,
+                          fontWeight: FontWeight.w700),
                     ),
                     const SizedBox(
                       height: 15,
@@ -337,7 +298,7 @@ class _MyOrderScreenState extends State<MyOrderScreen> {
                               fontWeight: FontWeight.w700),
                         ),
                         Text(
-                          "\$70",
+                          "\$00 😉",
                           style: TextStyle(
                               color: AppColors.primaryTextColor,
                               fontSize: 22,
@@ -349,7 +310,7 @@ class _MyOrderScreenState extends State<MyOrderScreen> {
                       height: 25,
                     ),
                     RoundButton(
-                        title: "Checkout",
+                        title: "valider la commande",
                         onPressed: () {
                           // Navigator.push(
                           //   context,

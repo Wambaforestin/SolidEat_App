@@ -12,26 +12,26 @@ class InboxScreen extends StatefulWidget {
 class _InboxScreenState extends State<InboxScreen> {
   List inboxArr = [
     {
-      "title": "Votre réservation a été mise à jour !",
-      "detail": "Votre réservation a été mise à jour !",
+      "title": "Votre réservation a été mise à jour!",
+      "detail": "Vous venez de recevoir une mise à jour de votre réservation!",
     },
     {
-      "title": "Un nouveau restaurant a été ajouté à notre liste !",
-      "detail": "Un nouveau restaurant a été ajouté à notre liste !",
+      "title": "Un nouveau restaurant a été ajouté à notre liste!",
+      "detail": "Un nouveau restaurant a été ajouté à notre liste!",
     },
     {
       "title":
-          "Profitez de la livraison gratuite pour votre prochaine commande !",
+          "Profitez de la livraison gratuite pour votre prochaine commande!",
       "detail":
-          "Profitez de la livraison gratuite pour votre prochaine commande !",
+          "Profitez de la livraison gratuite pour votre prochaine commande!",
     },
     {
       "title": "Félicitations ! Vous avez gagné un bon de réduction.",
       "detail": "Félicitations ! Vous avez gagné un bon de réduction.",
     },
     {
-      "title": "Découvrez nos offres du jour !",
-      "detail": "Découvrez nos offres du jour !",
+      "title": "Découvrez nos offres du jour!",
+      "detail": "Découvrez nos offres du jour!",
     }
   ];
 

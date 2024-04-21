@@ -12,16 +12,16 @@ class NotificationsScreen extends StatefulWidget {
 class _NotificationsScreenState extends State<NotificationsScreen> {
   List notificationArr = [
     {
-      "title": "Votre réservation a été mise à jour !",
+      "title": "Votre réservation a été mise à jour!",
       "time": "11:30 AM",
     },
     {
-      "title": "Un nouveau restaurant a été ajouté à notre liste !",
+      "title": "Un nouveau restaurant a été ajouté à notre liste!",
       "time": "02:15 PM",
     },
     {
       "title":
-          "Profitez de la livraison gratuite pour votre prochaine commande !",
+          "Profitez de la livraison gratuite pour votre prochaine commande!",
       "time": "04:45 PM",
     },
     {
@@ -141,7 +141,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
                               Text(
                                 cObj["time"].toString(),
                                 style: const TextStyle(
-                                    color: AppColors.secondaryTextColor,
+                                    color: AppColors.primaryTextColor,
                                     fontSize: 12,
                                     fontWeight: FontWeight.w500),
                               ),
