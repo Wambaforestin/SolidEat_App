@@ -36,7 +36,7 @@ class _RoundButtonState extends State<RoundButton> {
               : AppColors.quatinaryButtonColor,
           borderRadius: BorderRadius.circular(30.0),
           border:
-              Border.all(color: AppColors.primaryButtonBorderColor, width: 2.0),
+              Border.all(color: AppColors.primaryButtonBorderColor, width: 1.0),
         ),
         child: Center(
           child: Text(

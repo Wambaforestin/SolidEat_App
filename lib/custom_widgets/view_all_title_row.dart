@@ -21,7 +21,7 @@ class ViewAllTitleRow extends StatelessWidget {
         TextButton(
           onPressed: onView,
           child: const Text(
-            "View all",
+            "voir tout",
             style: TextStyle(
                 color: AppColors.secondaryTextColor,
                 fontSize: 13,

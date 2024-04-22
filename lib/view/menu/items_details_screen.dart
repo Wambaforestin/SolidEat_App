@@ -508,45 +508,81 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                                                         icon: Icons.add,
                                                         color: AppColors
                                                             .secondaryTextColor,
-                                                        onPressed: () {}),
+                                                        onPressed: () {
+                                                          ScaffoldMessenger.of(
+                                                                  context)
+                                                              .showSnackBar(
+                                                            SnackBar(
+                                                              content: Row(
+                                                                children: [
+                                                                  const Expanded(
+                                                                    child: Text(
+                                                                      'Votre plat a été ajouté au panier avec succès!',
+                                                                      style: TextStyle(
+                                                                          color:
+                                                                              AppColors.primaryTextColor),
+                                                                    ),
+                                                                  ),
+                                                                  //creating a button to undo the action
+                                                                  TextButton(
+                                                                    onPressed:
+                                                                        () {
+                                                                      ScaffoldMessenger.of(
+                                                                              context)
+                                                                          .hideCurrentSnackBar();
+                                                                    },
+                                                                    child: const Icon(
+                                                                        Icons
+                                                                            .close,
+                                                                        color: AppColors
+                                                                            .primaryTextColor),
+                                                                  ),
+                                                                ],
+                                                              ),
+                                                              backgroundColor:
+                                                                  AppColors
+                                                                      .secondaryTextColor,
+                                                            ),
+                                                          );
+                                                        }),
                                                   )
                                                 ],
                                               )),
-                                          InkWell(
-                                            onTap: () {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      const MyOrderScreen(),
-                                                ),
-                                              );
-                                            },
-                                            child: Container(
-                                              width: 45,
-                                              height: 45,
-                                              decoration: BoxDecoration(
-                                                  color: Colors.white,
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          22.5),
-                                                  boxShadow: const [
-                                                    BoxShadow(
-                                                        color: AppColors
-                                                            .secondaryTextColor,
-                                                        blurRadius: 4,
-                                                        offset: Offset(0, 2))
-                                                  ]),
-                                              alignment: Alignment.center,
-                                              child: Image.asset(
-                                                "assets/app_icons/shopping_cart_icon.png",
-                                                width: 20,
-                                                height: 20,
-                                                color: AppColors
-                                                    .secondaryTextColor,
-                                              ),
-                                            ),
-                                          ),
+                                          // InkWell(
+                                          //   onTap: () {
+                                          //     Navigator.push(
+                                          //       context,
+                                          //       MaterialPageRoute(
+                                          //         builder: (context) =>
+                                          //             const MyOrderScreen(),
+                                          //       ),
+                                          //     );
+                                          //   },
+                                          //   child: Container(
+                                          //     width: 45,
+                                          //     height: 45,
+                                          //     decoration: BoxDecoration(
+                                          //         color: Colors.white,
+                                          //         borderRadius:
+                                          //             BorderRadius.circular(
+                                          //                 22.5),
+                                          //         boxShadow: const [
+                                          //           BoxShadow(
+                                          //               color: AppColors
+                                          //                   .secondaryTextColor,
+                                          //               blurRadius: 4,
+                                          //               offset: Offset(0, 2))
+                                          //         ]),
+                                          //     alignment: Alignment.center,
+                                          //     child: Image.asset(
+                                          //       "assets/app_icons/shopping_cart_icon.png",
+                                          //       width: 20,
+                                          //       height: 20,
+                                          //       color: AppColors
+                                          //           .secondaryTextColor,
+                                          //     ),
+                                          //   ),
+                                          // ),
                                         ],
                                       ),
                                     )
@@ -608,12 +644,12 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                       ),
                       IconButton(
                         onPressed: () {
-                          // Navigator.push(
-                          //   context,
-                          //   MaterialPageRoute(
-                          //     builder: (context) => const MyOrderView(),
-                          //   ),
-                          // );
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const MyOrderScreen(),
+                            ),
+                          );
                         },
                         icon: Image.asset(
                           "assets/app_icons/shopping_cart_icon.png",

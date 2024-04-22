@@ -27,6 +27,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
   @override
   Widget build(BuildContext context) {
+    var media = MediaQuery.sizeOf(context);
     return Scaffold(
         body: SingleChildScrollView(
       child: Padding(
@@ -188,6 +189,39 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 title: "Sauvegarder",
                 onPressed: () {
                   //TODO: Implement the save profile logic
+                  showDialog(
+                    context: context,
+                    builder: (context) => AlertDialog(
+                      title: const Center(
+                        child: Text("Profil mis à jour"),
+                      ),
+                      content: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Image.asset(
+                            "assets/images/popup_image2.png",
+                            width: media.width * 0.35,
+                          ),
+                          const Text(
+                            "Votre profil a été mis à jour avec succès",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                color: AppColors.primaryTextColor,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w700),
+                          ),
+                          const SizedBox(
+                            height: 20,
+                          ),
+                          RoundButton(
+                              title: "OK",
+                              onPressed: () {
+                                Navigator.pop(context);
+                              }),
+                        ],
+                      ),
+                    ),
+                  );
                 }),
           ),
           const SizedBox(

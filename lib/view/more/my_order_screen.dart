@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:solideat/common_custom_widgets/colors.dart';
 import 'package:solideat/custom_widgets/round_button.dart';
+import 'package:solideat/view/more/my_order_val_message_screen.dart';
 
 class MyOrderScreen extends StatefulWidget {
   const MyOrderScreen({super.key});
@@ -11,11 +12,11 @@ class MyOrderScreen extends StatefulWidget {
 
 class _MyOrderScreenState extends State<MyOrderScreen> {
   List itemArr = [
-    {"name": "Beef Burger", "qty": "1", "price": 16.0},
-    {"name": "Classic Burger", "qty": "1", "price": 14.0},
-    {"name": "Cheese Chicken Burger", "qty": "1", "price": 17.0},
-    {"name": "Chicken Legs Basket", "qty": "1", "price": 15.0},
-    {"name": "French Fires Large", "qty": "1", "price": 6.0}
+    {"name": "Bœuf Bourguignon", "qty": 1},
+    {"name": "Burger Classique", "qty": 2},
+    {"name": "Burger Poulet Fromage", "qty": 1},
+    {"name": "Panier de Cuisses de Poulet", "qty": 2},
+    {"name": "Frites Françaises (Grande)", "qty": 6}
   ];
 
   @override
@@ -210,7 +211,7 @@ class _MyOrderScreenState extends State<MyOrderScreen> {
                         children: [
                           Expanded(
                             child: Text(
-                              "${cObj["name"].toString()} x${cObj["qty"].toString()}",
+                              "${cObj["name"].toString()}",
                               style: const TextStyle(
                                   color: AppColors.primaryTextColor,
                                   fontSize: 13,
@@ -221,7 +222,7 @@ class _MyOrderScreenState extends State<MyOrderScreen> {
                             width: 15,
                           ),
                           Text(
-                            "\$${cObj["price"].toString()}",
+                            "${cObj["qty"].toString()}",
                             style: const TextStyle(
                                 color: AppColors.primaryTextColor,
                                 fontSize: 13,
@@ -312,12 +313,13 @@ class _MyOrderScreenState extends State<MyOrderScreen> {
                     RoundButton(
                         title: "valider la commande",
                         onPressed: () {
-                          // Navigator.push(
-                          //   context,
-                          //   MaterialPageRoute(
-                          //     builder: (context) => const CheckoutView(),
-                          //   ),
-                          // );
+                         //creation d'un bottom sheet pour afficher MyOrderValMessageScreen(),
+                          showModalBottomSheet(
+                              context: context,
+                              isScrollControlled: true,
+                              builder: (context) {
+                                return const MyOrderValMessageScreen();
+                              });
                         }),
                     const SizedBox(
                       height: 20,

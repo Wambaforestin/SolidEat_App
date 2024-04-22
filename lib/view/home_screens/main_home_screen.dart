@@ -6,6 +6,7 @@ import 'package:solideat/custom_widgets/popular_restaurant_row.dart';
 import 'package:solideat/custom_widgets/recent_item_row.dart';
 import 'package:solideat/custom_widgets/text_field.dart';
 import 'package:solideat/custom_widgets/view_all_title_row.dart';
+import 'package:solideat/view/more/change_address_screen.dart';
 import 'package:solideat/view/more/my_order_screen.dart';
 
 class MainHomeScreen extends StatefulWidget {
@@ -20,12 +21,12 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
   TextEditingController txtSearch = TextEditingController();
   //this is the list of categories
   List catArr = [
-    {"image": "assets/images/food1.png", "name": "Bonne"},
-    {"image": "assets/images/food1.png", "name": "Bonne"},
-    {"image": "assets/images/food1.png", "name": "Bonne"},
-    {"image": "assets/images/food1.png", "name": "Bonne"},
-    {"image": "assets/images/food1.png", "name": "Bonne"},
-    {"image": "assets/images/food1.png", "name": "Bonne"},
+    {"image": "assets/images/food1.png", "name": "Burger"},
+    {"image": "assets/images/food1.png", "name": "Burger"},
+    {"image": "assets/images/food1.png", "name": "Burger"},
+    {"image": "assets/images/food1.png", "name": "Burger"},
+    {"image": "assets/images/food1.png", "name": "Burger"},
+    {"image": "assets/images/food1.png", "name": "Burger"},
   ];
   //this is the list of popular restaurants
   List popArr = [
@@ -126,7 +127,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     const Text(
-                      "Bonjour",
+                      "Bonjour User...",
                       // "Good morning ${ServiceCall.userPayload[KKey.name] ?? ""}!",
                       style: TextStyle(
                           color: AppColors.primaryTextColor,
@@ -136,11 +137,11 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                     IconButton(
                       onPressed: () {
                         Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const MyOrderScreen(),
-                              ),
-                            );
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const MyOrderScreen(),
+                          ),
+                        );
                       },
                       icon: Image.asset(
                         "assets/app_icons/shopping_cart_icon.png",
@@ -170,23 +171,31 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        const Text(
-                          "Localisation Actuelle",
-                          style: TextStyle(
-                              color: AppColors.primaryTextColor,
-                              fontSize: 16,
-                              fontWeight: FontWeight.w700),
-                        ),
-                        const SizedBox(
-                          width: 25,
+                        TextButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    const ChangeAddressScreen(),
+                              ),
+                            );
+                          },
+                          child: const Text(
+                            "Localisation Actuelle",
+                            style: TextStyle(
+                                color: AppColors.primaryTextColor,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w700),
+                          ),
                         ),
                         Image.asset(
-                          "assets/app_icons/drop_down_icon.png",
+                          "assets/app_icons/location_icon.png",
                           width: 12,
                           height: 12,
                         )
                       ],
-                    )
+                    ),
                   ],
                 ),
               ),
@@ -275,7 +284,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 //calling the view all title row widget
                 child: ViewAllTitleRow(
-                  title: "Récents",
+                  title: "Offre Spéciale",
                   onView: () {},
                 ),
               ),
