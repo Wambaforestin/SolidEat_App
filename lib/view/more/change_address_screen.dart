@@ -155,53 +155,53 @@ class _ChangeAddressScreenState extends State<ChangeAddressScreen> {
               ),
             markers: markers,
             onMapCreated: (GoogleMapController controller) {
-              _controller = controller;
+              _controller = _controller;
             },
           );
         },
       ),
-      bottomNavigationBar: BottomAppBar(
-        child: SafeArea(
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              const Padding(
-                padding: EdgeInsets.symmetric(vertical: 15, horizontal: 25),
-                child: RoundTextfield(
-                  hintText: "Search Address",
-                  left: Icon(Icons.search, color: AppColors.primaryTextColor),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 25),
-                child: Row(
-                  children: [
-                    Image.asset('assets/app_icons/heart_clicked_icon.png',
-                        width: 35, height: 35),
-                    const SizedBox(width: 8),
-                    const Expanded(
-                      child: Text(
-                        "Choose a saved place",
-                        style: TextStyle(
-                          color: AppColors.primaryTextColor,
-                          fontSize: 14,
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ),
-                    ),
-                    Image.asset(
-                      'assets/images/next_icon.png',
-                      width: 15,
-                      height: 15,
-                      color: AppColors.primaryTextColor,
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
+      // bottomNavigationBar: BottomAppBar(
+      //   child: SafeArea(
+      //     child: Column(
+      //       mainAxisSize: MainAxisSize.min,
+      //       children: [
+      //         const Padding(
+      //           padding: EdgeInsets.symmetric(vertical: 15, horizontal: 25),
+      //           child: RoundTextfield(
+      //             hintText: "Search Address",
+      //             left: Icon(Icons.search, color: AppColors.primaryTextColor),
+      //           ),
+      //         ),
+      //         Padding(
+      //           padding: const EdgeInsets.symmetric(horizontal: 25),
+      //           child: Row(
+      //             children: [
+      //               Image.asset('assets/app_icons/heart_clicked_icon.png',
+      //                   width: 35, height: 35),
+      //               const SizedBox(width: 8),
+      //               const Expanded(
+      //                 child: Text(
+      //                   "Choose a saved place",
+      //                   style: TextStyle(
+      //                     color: AppColors.primaryTextColor,
+      //                     fontSize: 14,
+      //                     fontWeight: FontWeight.w600,
+      //                   ),
+      //                 ),
+      //               ),
+      //               Image.asset(
+      //                 'assets/images/next_icon.png',
+      //                 width: 15,
+      //                 height: 15,
+      //                 color: AppColors.primaryTextColor,
+      //               ),
+      //             ],
+      //           ),
+      //         ),
+      //       ],
+      //     ),
+      //   ),
+      // ),
     );
   }
 }
