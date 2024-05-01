@@ -1,5 +1,7 @@
 # solideat
 
+![App Cover](/assets/images/Cover.png)
+
 Our enterprise ,SolidEat is made up of solidarity restaurants, establishments that offer hot meals to people in precarious situations. We aim to combat social exclusion and encourage reintegration.
 
 ## Getting Started

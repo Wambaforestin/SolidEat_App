@@ -6,7 +6,7 @@ import 'package:solideat/custom_widgets/popular_restaurant_row.dart';
 import 'package:solideat/custom_widgets/recent_item_row.dart';
 import 'package:solideat/custom_widgets/text_field.dart';
 import 'package:solideat/custom_widgets/view_all_title_row.dart';
-import 'package:solideat/view/more/change_address_screen.dart';
+import 'package:solideat/view/more/view_location_screen.dart';
 import 'package:solideat/view/more/my_order_screen.dart';
 
 class MainHomeScreen extends StatefulWidget {
@@ -177,12 +177,12 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
                               context,
                               MaterialPageRoute(
                                 builder: (context) =>
-                                    const ChangeAddressScreen(),
+                                    const ViewlocationScreen(),
                               ),
                             );
                           },
                           child: const Text(
-                            "Localisation Actuelle",
+                            "Restaurant autour de vous",
                             style: TextStyle(
                                 color: AppColors.primaryTextColor,
                                 fontSize: 16,
